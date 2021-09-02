@@ -16,10 +16,32 @@ loginBtn.addEventListener('click', () => {
 });
 
 //transaction calculation
-let depositBalance = document.querySelector('#deposit-balance').innerText;
-let withdraeBalance = document.querySelector('#withdraw-balance').innerText;
-let mainBalance = document.querySelector('#main-balance').innerText;
-let depositAmount = document.querySelector('#deposit-amount').value;
-let withdrawAmount = document.querySelector('#withdraw-amount').value;
 const addDeposit = document.querySelector('#add-deposit');
 const addWithdraw = document.querySelector('#add-withdraw');
+
+addDeposit.addEventListener('click', () => {
+    let depositAmount = document.querySelector('#deposit-amount');
+    let depositAmountNum = parseFloat(depositAmount.value);
+
+    updateBalance('total-deposit', depositAmountNum);
+    updateBalance('balance', depositAmountNum);
+
+    document.querySelector('#deposit-amount').value = '';
+});
+
+addWithdraw.addEventListener('click', () => {
+    let withdrawAmount = document.getElementById('withdraw-amount');
+    let withdrawAmountNum = parseFloat(withdrawAmount.value);
+
+    updateBalance('total-withdraw', withdrawAmountNum);
+    updateBalance('balance', -withdrawAmountNum);
+
+    document.getElementById('withdraw-amount').value = '';
+})
+
+const updateBalance = (id, current) => {
+    let total = document.getElementById(id);
+    let totalNum = parseFloat(total.innerText);
+    totalNum += current;
+    document.getElementById(id).innerText = totalNum;
+}

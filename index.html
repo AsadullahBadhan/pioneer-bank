@@ -24,19 +24,19 @@
 				<div class="col-md-4">
 					<div class="deposit rounded text-white p-3 bg-primary">
 						<h4>Deposit</h4>
-						<h2>$<span id="deposit-balance">0</span></h2>
+						<h2>$<span id="total-deposit">0</span></h2>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="withdra rounded text-white p-3 bg-danger">
 						<h4>Withdraw</h4>
-						<h2>$<span id="withdraw-balance">0</span></h2>
+						<h2>$<span id="total-withdraw">0</span></h2>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="balance rounded text-white p-3 bg-warning">
 						<h4>Balance</h4>
-						<h2>$<span id="main-balance">1240</span></h2>
+						<h2>$<span id="balance">1240</span></h2>
 					</div>
 				</div>
 			</div>
@@ -44,7 +44,7 @@
 				<div class="col-md-6">
 					<div class="deposit-form p-4 shadow rounded mt-5">
 						<h4>Deposit</h4>
-						<input type="number" name="" id="deposit-amount" class="form-control" />
+						<input type="number" placeholder="$ amount you want to deposit" id="deposit-amount" class="form-control" />
 						<br />
 						<button class="btn btn-success" id="add-deposit">Deposit</button>
 					</div>
@@ -52,7 +52,7 @@
 				<div class="col-md-6">
 					<div class="withdraw-form p-4 shadow rounded mt-5">
 						<h4>Withdraw</h4>
-						<input type="number" name="" id="withdraw-amount" class="form-control" />
+						<input type="number" placeholder="$ amount you want to withdraw" id="withdraw-amount" class="form-control" />
 						<br />
 						<button class="btn btn-success" id="add-withdraw">Withdraw</button>
 					</div>
